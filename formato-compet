@@ -1,0 +1,591 @@
+const data = [
+    {
+        Identificacion: 1013648615,
+        Nombre: 'Johan Sebastian',
+        Apellido: 'Ussa Rubio',
+        Estado_Horario: true,
+        Horario: [
+            {
+                FechaInicio: '2023-04-03',
+                FechaFin: '2023-07-06', 
+                Ficha: [
+                    {
+                        Num_Ficha: 1234567,
+                        Num_Ruta: 'Grupo 5',
+                        Trimestre: '1 de 3',
+                        Programa: 'Sistemas',
+                        Codigo: '144320 V.1',
+                        Competencias: ['Competencias 2'],
+                        Descripcion: 'Descripcion 2',
+                        Num_Aprendices: 23,
+                        Ambiente: 209
+                    }
+                ],
+                Complementaria: false,
+                Horas: [{ pos: 5, color: 1 }, { pos: 6, color: 'p' }]
+            },
+            {
+                FechaInicio: '2023-02-02',
+                FechaFin: '2023-02-09', 
+                Ficha: [
+                    {
+                        Num_Ficha: 2557679,
+                        Num_Ruta: 'Grupo 2',
+                        Trimestre: '3 de 3',
+                        Programa: 'Programacion de Software',
+                        Codigo: 2443160,
+                        Competencias: ['Competencias 1'],
+                        Descripcion: 'Descripcion 1',
+                        Num_Aprendices: 16,
+                        Ambiente: 203
+                    }
+                ],
+                Complementaria: ['Formacion Complementaria'],
+                Horas: [{ pos: 12, color: 1 }, { pos: 26, color: 'p' }, { pos: 16, color: 'c' }]
+            },
+            {
+                "FechaInicio": "2023-02-01",
+                "FechaFin": "2023-02-28",
+                "Ficha": [
+                    {
+                        "Num_Ficha": "2557679",
+                        "Num_Ruta": "Grupo 2",
+                        "Trimestre": "3 de 3",
+                        "Programa": "Programacion de Software",
+                        "Codigo": "233104 V.1",
+                        "Competencias": [
+                            "Administrar base de datos con los estándares y requisitos técnicos.",
+                            "Fomentar cultura emprendedora según habilidades y culturas personales."
+                        ],
+                        "Descripcion": "Agrego una descripción ",
+                        "Num_Aprendices": "21",
+                        "Ambiente": "203 Informatica"
+                    },
+                    {
+                        "Num_Ficha": "2551340",
+                        "Num_Ruta": "Grupo 1",
+                        "Trimestre": "1 de 3",
+                        "Programa": "Sistemas",
+                        "Codigo": "233104 V.1",
+                        "Competencias": [
+                            "Realizar mantenimiento preventivo y predictivo que prolongue el funcionamiento de los equipos de cómputo.",
+                            "Aplicar herramientas ofimáticas, redes sociales y colaborativas de acuerdo con el proyecto a desarrollar."
+                        ],
+                        "Descripcion": "Descripción para sistemas ",
+                        "Num_Aprendices": "17",
+                        "Ambiente": "203 Informatica"
+                    }
+                ],
+                "Complementaria": [],
+                "Horas": [
+                    { "pos": 6, "color": 1, Ambiente: '203 Informatica' }, { "pos": 12, "color": 1, Ambiente: '203 Informatica' }, 
+                    { "pos": 18, "color": 1, Ambiente: '203 Informatica' }, { "pos": 24, "color": 1, Ambiente: '203 Informatica' },
+                    { "pos": 30, "color": 1, Ambiente: '203 Informatica' }, { "pos": 31, "color": 1, Ambiente: '203 Informatica' }, 
+                    { "pos": 25, "color": 1, Ambiente: '203 Informatica' }, { "pos": 19, "color": 1, Ambiente: '203 Informatica' },
+                    { "pos": 13, "color": 1, Ambiente: '203 Informatica' }, { "pos": 7, "color": 1, Ambiente: '203 Informatica' }, 
+                    { "pos": 8, "color": 1, Ambiente: '203 Informatica' }, { "pos": 14, "color": 1, Ambiente: '203 Informatica' },
+                    { "pos": 20, "color": 1, Ambiente: '203 Informatica' }, { "pos": 26, "color": 1, Ambiente: '203 Informatica' }, 
+                    { "pos": 32, "color": 1, Ambiente: '203 Informatica' }, { "pos": 27, "color": 1, Ambiente: '203 Informatica' },
+                    { "pos": 33, "color": 1, Ambiente: '203 Informatica' }, { "pos": 21, "color": 1, Ambiente: '203 Informatica' }, 
+                    { "pos": 15, "color": 1, Ambiente: '203 Informatica' }, { "pos": 9, "color": 1, Ambiente: '203 Informatica' },
+                    { "pos": 10, "color": 1, Ambiente: '203 Informatica' }, { "pos": 16, "color": 1, Ambiente: '203 Informatica' }, 
+                    { "pos": 22, "color": 1, Ambiente: '203 Informatica' }, { "pos": 28, "color": 1, Ambiente: '203 Informatica' },
+                    { "pos": 34, "color": 1, Ambiente: '203 Informatica' }, { "pos": 42, "color": 2, Ambiente: '113 Quimica'  }, 
+                    { "pos": 54, "color": 2, Ambiente: '113 Quimica' }, { "pos": 48, "color": 2, Ambiente: '113 Quimica' },
+                    { "pos": 60, "color": 2, Ambiente: '113 Quimica' }, { "pos": 66, "color": 2, Ambiente: '113 Quimica' }, 
+                    { "pos": 67, "color": 2, Ambiente: '113 Quimica' }, { "pos": 61, "color": 2, Ambiente: '113 Quimica' },
+                    { "pos": 55, "color": 2, Ambiente: '113 Quimica' }, { "pos": 49, "color": 2, Ambiente: '113 Quimica' }, 
+                    { "pos": 43, "color": 2, Ambiente: '113 Quimica' }, { "pos": 44, "color": "p" },
+                    { "pos": 50, "color": "p" }, { "pos": 56, "color": "p" }, { "pos": 62, "color": "p" }, { "pos": 68, "color": "p" }
+                ]
+            }
+        ]        
+    },
+    {
+        Identificacion: 1234567890,
+        Nombre: 'Jhon Jairo',
+        Apellido: 'Villanueva Sanchez',
+        Estado_Horario: true,
+        Horario: [
+            {
+                "FechaInicio": "2023-02-01",
+                "FechaFin": "2023-02-28",
+                "Ficha": [
+                    {
+                        "Num_Ficha": "2557679",
+                        "Num_Ruta": "Grupo 2",
+                        "Trimestre": "3 de 3",
+                        "Programa": "Programacion de Software",
+                        "Codigo": "233104 V.1",
+                        "Competencias": [
+                            "Administrar base de datos con los estándares y requisitos técnicos.",
+                            "Establecer requisitos de solución de software de acuerdo con estándares y procedimiento técnico.",
+                            "Utilizar herramientas informáticas de acuerdo con las necesidades de manejo de información."
+                        ],
+                        "Descripcion": "descripción para software",
+                        "Num_Aprendices": "17",
+                        "Ambiente": "200 Informatica"
+                    },
+                    {
+                        "Num_Ficha": "4567890",
+                        "Num_Ruta": "Grupo 1",
+                        "Trimestre": "1 de 3",
+                        "Programa": "Sistemas",
+                        "Codigo": "233104 V.1",
+                        "Competencias": [
+                            "Realizar mantenimiento preventivo y predictivo que prolongue el funcionamiento de los equipos de cómputo.",
+                            "Aplicar herramientas ofimáticas, redes sociales y colaborativas de acuerdo con el proyecto a desarrollar.",
+                            "Comprender textos en inglés en forma escrita y auditiva."
+                        ],
+                        "Descripcion": "Descripción para sistemas",
+                        "Num_Aprendices": "16",
+                        "Ambiente": "302 Sistemas"
+                    }
+                ],
+                "Complementaria": [
+                    "Se agrega una formación complementaria"
+                ],
+                "Horas": [
+                    { "pos": 6, "color": 1 }, { "pos": 12, "color": 1 }, { "pos": 18, "color": 1 }, { "pos": 24, "color": 1 },
+                    { "pos": 30, "color": 1 }, { "pos": 31, "color": 1 }, { "pos": 25, "color": 1 }, { "pos": 19, "color": 1 },
+                    { "pos": 13, "color": 1 }, { "pos": 7, "color": 1 }, { "pos": 8, "color": 2, "Ambiente": "203 Informatica" },
+                    { "pos": 14, "color": 2, "Ambiente": "203 Informatica" }, { "pos": 20, "color": 2, "Ambiente": "203 Informatica" },
+                    { "pos": 26, "color": 2, "Ambiente": "203 Informatica" }, { "pos": 32, "color": 2, "Ambiente": "203 Informatica" },
+                    { "pos": 27, "color": 2, "Ambiente": "203 Informatica" }, { "pos": 33, "color": 2, "Ambiente": "203 Informatica" },
+                    { "pos": 15, "color": 2, "Ambiente": "203 Informatica" }, { "pos": 21, "color": 2, "Ambiente": "203 Informatica" },
+                    { "pos": 9, "color": 2, "Ambiente": "203 Informatica" }, { "pos": 10, "color": 2, "Ambiente": "203 Informatica" },
+                    { "pos": 16, "color": 2, "Ambiente": "203 Informatica" }, { "pos": 22, "color": 2, "Ambiente": "203 Informatica" },
+                    { "pos": 28, "color": 2, "Ambiente": "203 Informatica" }, { "pos": 34, "color": 2, "Ambiente": "203 Informatica" },
+                    { "pos": 42, "color": 3, "Ambiente": "302 Sistemas" }, { "pos": 48, "color": 3, "Ambiente": "302 Sistemas" },
+                    { "pos": 54, "color": 3, "Ambiente": "302 Sistemas" }, { "pos": 66, "color": 3, "Ambiente": "302 Sistemas" },
+                    { "pos": 60, "color": 3, "Ambiente": "302 Sistemas" }, { "pos": 67, "color": 3, "Ambiente": "302 Sistemas" },
+                    { "pos": 61, "color": 3, "Ambiente": "302 Sistemas" }, { "pos": 55, "color": 3, "Ambiente": "302 Sistemas" },
+                    { "pos": 49, "color": 3, "Ambiente": "302 Sistemas" }, { "pos": 43, "color": 3, "Ambiente": "302 Sistemas" },
+                    { "pos": 44, "color": "p" }, { "pos": 50, "color": "p" }, { "pos": 56, "color": "p" }, { "pos": 68, "color": "p" },
+                    { "pos": 62, "color": "p"  }
+                ]
+            }
+        ]
+    },
+    {
+        Identificacion: 1023456789,
+        Nombre: 'Maria Mercedes',
+        Apellido: 'Gonzalez Triana',
+        Estado_Horario: false,
+        Horario: []
+    },
+    {
+        Identificacion: 79568412,
+        Nombre: 'Ana Milena',
+        Apellido: 'Perez Mendez',
+        Estado_Horario: false,
+        Horario: []
+    },
+    {
+        Identificacion: 52369741,
+        Nombre: 'Jhon Alexander',
+        Apellido: 'Rodriguez Zapata',
+        Estado_Horario: false,
+        Horario: []
+    },
+    {
+        Identificacion: 1014256987,
+        Nombre: 'Lina Fernanda',
+        Apellido: 'Suarez Rodriguez',
+        Estado_Horario: false,
+        Horario: []
+    }
+];
+const programas = [
+    'Control de calidad de alimentos.',
+    'Inspección de materiales con pruebas no destructiva.',
+    'Programación de software.',
+    'Alistamiento de laboratorios de análisis y ensayos para la industria',
+    'Carpintería de aluminio.',
+    'Carpintería metálica.',
+    'Engaste de gemas en joyería.',
+    'Fabricación de productos con fibra de vidrio y materiales Compuestos.',
+    'Fabricación y mantenimiento de productos con materiales compuestos.',
+    'Joyería armada.',
+    'Mantenimiento y reconstrucción de piezas metálicas para armamento básico de infantería.',
+    'Modelado 3D para joyería.',
+    'Modelado 3D para la industria.',
+    'Elaboración de joyas en filigrana.',
+    'Bisutería artesanal.',
+    'Laminación manual fibra de vidrio.',
+    'Recuperación de residuos sólidos reciclables.',
+    'Soldadura de tuberías de acero al carbono con proceso GTAW y SMAW.',
+    'Recuperación de residuos sólidos plásticos.',
+    'Sistemas.',
+    'Soldadura de productos metálicos en platina.',
+    'Supervisión de la fabricación de productos metálicos soldados.',
+    'Análisis y desarrollo de software.',
+    'Gestión logística.',
+    'Negociación internacional.',
+    'Producción de multimedia.',
+    'Apoyo administrativo en salud.'
+];
+const aulas = [
+    'QMA', '102 Alturas 1', '105 Mecanizado', '106 Alumina', '107 Soldadura', '108 Manufactura Manual', 
+    '108A Manufactura Digital', '108B Diseño', '108C Laboratorio Compuestos', '111 Ensayos', '112 Matematicas', 
+    '113 Quimica', '114 Alturas 2', '118', '119 Metalografia', '139 Planos y Simbologia', '141 Planos y Simbologia', 
+    '143 Planos y Simbologia', '145 Ciencias Naturales', '147 Planos y Simbologia', '200 Informatica', 
+    '201 Audiovisuales', '202 Emprendimiento', '203 Informatica', '210 Investigacion', '211 SG-SST', '212 Matematicas', 
+    '213 Dibujo', '300 Talla', '300B Talla', '301 Simuladores', '302 Sistemas', '303 Esmeralda', '304'
+];
+const colors = {
+    1 : 'one', 2 : 'two', 3 : 'three', 4 : 'four', 5 : 'five', 6 : 'six', 7 : 'seven',
+    8 : 'eight', 9 : 'nine', 10 : 'ten', 11 : 'eleven', 12 : 'twelve', 13 : 'thirteen', p : 'preparacion'
+}
+const competencias = [
+    {
+        Control : [
+            'Prepara la carga de acuerdo con su naturaleza medio de transporte y destino.',
+            'Promover la interacción idónea consigo mismo, con los demás y con la naturaleza en los contextos laboral y social.',
+            'Comprender textos en inglés en forma escrita y auditiva.',
+            'Producir textos en inglés en forma escrita y oral.',
+            'Presentar los informes estadísticos de calidad según especificaciones dadas por la empresa.',
+            'Gestionar los planes y programas de producción de acuerdo con los objetivos y políticas trazados por la empresa.',
+            'Gestionar los procesos de producción según las necesidades del cliente y exigencias de la empresa.',
+            'Controlar la formulación para el producto, según especificaciones del cliente y volúmenes de producción.',
+            'Administrar los materiales e insumos de acuerdo con las políticas empresariales y del sector.',
+            'Analizar muestras para control de calidad microbiológico de alimentos según protocolos establecidos.',
+            'Realizar en alimentos análisis fisicoquímico de acuerdo con protocolo establecido.',
+            'Aplicar en alimentos análisis sensorial de acuerdo con protocolos establecidos.',
+            'Resultados de aprendizaje etapa práctica.',
+            'Promover la interacción idónea consigo mismo, con los demás y con la naturaleza en los contextos laboral y social.',
+            'Comprender textos en inglés en forma escrita y auditiva.',
+            'Producir textos en inglés en forma escrita y oral.'
+        ]
+    },
+    {
+        Inspección : [
+            'Aplicación de conocimientos de las ciencias naturales de acuerdo con situaciones del contexto productivo y social.',
+            'Aplicación de prácticas de protección ambiental, seguridad y salud en el trabajo.',
+            'Dibujar planos mecánicos de acuerdo con normas técnicas.',
+            'Desempeño de derechos fundamentales de trabajo.',
+            'Enrique Low Murtra - ética y cultura de paz.',
+            'Cultura emprendedora y empresarial.',
+            'Actividad física y hábitos de vida saludable.',
+            'Inspeccionar materiales de acuerdo con método de líquidos penetrantes y normativa',
+            'Inspeccionar materiales de acuerdo con método visual y normativa.',
+            'Inspeccionar piezas, materiales y equipos con la técnica de partículas magnéticas de acuerdo con norma aplicable.',
+            'Inspeccionar piezas, materiales y equipos con la técnica de ultrasonido de acuerdo con norma aplicable.',
+            'Inspeccionar piezas, materiales y equipos con técnicas de radiografía industrial de acuerdo con norma aplicable.',
+            'Interacción de lengua inglesa de forma oral y escrita.',
+            'Operar equipos de magnitud dimensional de acuerdo con los procedimientos de medición.',
+            'Resultado de aprendizaje de la inducción.',
+            'Resultados de aprendizaje etapa práctica.'
+        ]
+    },
+    {
+        Programación : [
+            'Administrar base de datos de acuerdo con los estándares y requisitos técnicos.',
+            'Aplicación de prácticas de protección ambiental, seguridad y salud en el trabajo.',
+            'Desarrollar la solución de software de acuerdo con el diseño y metodologías de desarrollo.',
+            'Desarrollo de procesos de comunicación eficaces y efectivos.',
+            'Desempeño de derechos fundamentales de trabajo.',
+            'Enrique Low Murtra - ética y cultura de paz.',
+            'Establecer requisitos de la solución de software de acuerdo con estándares y procedimiento técnico.',
+            'Cultura emprendedora y empresarial.',
+            'Actividad física y hábitos de vida saludable.',
+            'Interacción de lengua inglesa de forma oral y escrita.',
+            'Razonar cuantitativamente frente a situaciones susceptibles de ser abordadas de manera matemática en contextos laborales, sociales y personales.',
+            'Utilización de herramientas informáticas.',
+            'Resultado de aprendizaje de la inducción.',
+            'Resultados de aprendizaje etapa práctica'
+        ]
+    },
+    {
+        Alistamiento : [
+            'Alistamiento del laboratorio.',
+            'Almacenamiento de material químico.',
+            'Aplicación de prácticas de protección ambiental, seguridad y salud en el trabajo.',
+            'Desarrollo de procesos de comunicación eficaces y efectivos.',
+            'Desempeño de derechos fundamentales de trabajo.',
+            'Enrique Low Murtra - ética y cultura de paz.',
+            'Actividad física y hábitos de vida saludable.',
+            'Cultura emprendedora y empresarial.',
+            'Interacción de lengua inglesa de forma oral y escrita.',
+            'Preparación de las condiciones del laboratorio.',
+            'Razonar cuantitativamente frente a situaciones susceptibles de ser abordadas de manera matemática en contextos laborales, sociales y personales.',
+            'Resultado de aprendizaje de la inducción.',
+            'Resultados de aprendizaje etapa práctica.'
+        ]
+    },
+    {
+        CarpinteríaA : [
+            'Aplicación de prácticas de protección ambiental, seguridad y salud en el trabajo.',
+            'Corte de perfilería en aluminio.',
+            'Desarrollo de procesos de comunicación eficaces y efectivos.',
+            'Desempeño de derechos fundamentales de trabajo.',
+            'Enrique Low Murtra - ética y cultura de paz.',
+            'Ensamble de sistemas de aluminio.',
+            'Cultura emprendedora y empresarial.',
+            'Actividad física y hábitos de vida saludable.',
+            'Instalación de sistemas en aluminio.',
+            'Resultado de aprendizaje de la inducción.',
+            'Resultados de aprendizaje etapa práctica.',
+            'Utilización de herramientas informáticas.'
+        ]
+    },
+    {
+        CarpinteríaM : [
+            'Comprender textos en inglés en forma escrita y auditiva.',
+            'Conformar y armar láminas, perfiles y tubos en productos metálicos conforme a especificaciones de fabricación.',
+            'Construir estructura liviana e instalar láminas, para sistema constructivo en seco, de acuerdo con normas, planos y especificaciones.',
+            'Efectuar en productos o procesos metalmecánicos mediciones cumpliendo parámetros de efectividad operativa.',
+            'Promover la interacción idónea consigo mismo, con los demás y con la naturaleza en los contextos laboral y social.',
+            'Replantear los diseños de acuerdo con normas, planos y especificaciones.',
+            'Soldar productos metálicos (platina) por arco eléctrico con electrodo revestido (SMAW). Según procedimiento de fabricación.',
+            'Soldar productos metálicos (platina) por arco protegido con gas con alambre electrodo (mig-mag) según procedimiento de fabricación.',
+            'Resultados de aprendizaje etapa práctica.'
+        ]
+    },
+    {
+        Engaste : [
+            'Aplicación de prácticas de protección ambiental, seguridad y salud en el trabajo.',
+            'Desempeño de derechos fundamentales de trabajo.',
+            'Engaste de gemas.',
+            'Enrique Low Murtra - ética y cultura de paz.',
+            'Cultura emprendedora y empresarial.',
+            'Actividad física y hábitos de vida saludable.',
+            'Razonar cuantitativamente frente a situaciones susceptibles de ser abordadas de manera matemática en contextos laborales, sociales y personales.',
+            'Resultado de aprendizaje de la inducción.',
+            'Utilización de herramientas informáticas.',
+            'Resultados de aprendizaje etapa práctica.'
+        ]
+    },
+    {
+        Fabricación : [
+            'Aplicación de conocimientos de las ciencias naturales de acuerdo con situaciones del contexto productivo y social.',
+            'Aplicación de prácticas de protección ambiental, seguridad y salud en el trabajo.',
+            'Desarrollo de procesos de comunicación eficaces y efectivos.',
+            'Desempeño de derechos fundamentales de trabajo.',
+            'Enrique Low Murtra - ética y cultura de paz.',
+            'Fabricar modelos y placas modelo cumpliendo requerimientos de los procesos industriales.',
+            'Fabricar moldes por contacto en polímeros reforzados y cargados, requeridos en procesos de termoformado, termo soplado y espumado.',
+            'Actividad física y hábitos de vida saludable.',
+            'Cultura emprendedora y empresarial.',
+            'Interacción de lengua inglesa de forma oral y escrita.',
+            'Fabricación de piezas de laminación manual.',
+            'Fabricación de piezas de transferencia de resina de acuerdo con orden de producción.',
+            'Operar máquinas de fabricación de compuestos de acuerdo con manual técnico.',
+            'Razonar cuantitativamente frente a situaciones susceptibles de ser abordadas de manera matemática en contextos laborales, sociales y personales.',
+            'Recubrimiento de superficies según especificaciones y técnica de aspersión.',
+            'Resultado de aprendizaje de la inducción.',
+            'Utilización de herramientas informáticas.',
+            'Resultados de aprendizaje etapa práctica.'
+        ]
+    },
+    {
+        Mantenimiento : [
+            'Aplicación de conocimientos de las ciencias naturales de acuerdo con situaciones del contexto productivo y social.',
+            'Aplicación de prácticas de protección ambiental, seguridad y salud en el trabajo.',
+            'Desarrollo de procesos de comunicación eficaces y efectivos.',
+            'Desempeño de derechos fundamentales de trabajo.',
+            'Enrique Low Murtra - ética y cultura de paz.',
+            'Actividad física y hábitos de vida saludable.',
+            'Generar prototipo según técnicas y especificaciones de producto.',
+            'Cultura emprendedora y empresarial.',
+            'Interacción de lengua inglesa de forma oral y escrita.',
+            'Fabricación de piezas de laminación manual.',
+            'Reparar piezas de material compuesto según procedimientos.',
+            'Resultados de aprendizaje etapa práctica.',
+            'Razonar cuantitativamente frente a situaciones susceptibles de ser abordadas de manera Matemática en contextos laborales, sociales y personales.',
+            'Resultado de aprendizaje de la inducción.',
+            'Utilización de herramientas informáticas.'
+        ]
+    },
+    {
+        Joyería : [
+            'Aplicación de prácticas de protección ambiental, seguridad y salud en el trabajo.',
+            'Conformar metales según procedimientos técnicos y normativa.',
+            'Desarrollo de procesos de comunicación eficaces y efectivos.',
+            'Desempeño de derechos fundamentales de trabajo.',
+            'Enrique Low Murtra - ética y cultura de paz.',
+            'Ensamblar joyas según procedimientos técnicos y normativa.',
+            'Actividad física y hábitos de vida saludable.',
+            'Cultura emprendedora y empresarial.',
+            'Interacción de lengua inglesa de forma oral y escrita.',
+            'Resultado de aprendizaje de la inducción.',
+            'Resultados de aprendizaje etapa práctica.',
+            'Utilización de herramientas informáticas.'
+        ]
+    },
+    {
+        Reconstrucción : [
+            'Operar equipos y dispositivos de acuerdo con el proceso de recubrimientos y acabados.',
+            'Operar equipos y dispositivos de acuerdo con el proceso de tratamientos térmicos.',
+            'Operar torno paralelo según especificaciones del elemento mecánico a fabricar.',
+            'Recuperar productos metálicos aplicando el proceso de soldadura manual por arco eléctrico con electrodo revestido (SMAW) según procedimiento establecido.'
+        ]
+    },
+    {
+        ModeladoJ : [
+            'Modelar los elementos que hacen parte de la imagen de acuerdo con las necesidades del cliente.'
+        ]
+    },
+    {
+        ModeladoI : [
+            'Aplicación de conocimientos de las ciencias naturales de acuerdo con situaciones del contexto productivo y social.',
+            'Aplicación de prácticas de protección ambiental, seguridad y salud en el trabajo.',
+            'Desarrollo de procesos de comunicación eficaces y efectivos.',
+            'Dibujar propuesta de acuerdo con técnicas de dibujo y requerimientos de diseño.',
+            'Digitalizar dibujo de acuerdo con técnicas de modelación virtual y manuales técnicos.',
+            'Desempeño de derechos fundamentales de trabajo.',
+            'Enrique Low Murtra - ética y cultura de paz.',
+            'Actividad física y hábitos de vida saludable.',
+            'Cultura emprendedora y empresarial.',
+            'Imprimir modelo tridimensional de acuerdo con técnicas de manufactura aditiva.',
+            'Interacción de lengua inglesa de forma oral y escrita.',
+            'Razonar cuantitativamente frente a situaciones susceptibles de ser abordadas de manera matemática en contextos laborales, sociales y personales.',
+            'Resultado de aprendizaje de la inducción.',
+            'Resultados de aprendizaje etapa práctica.',
+            'Utilización de herramientas informáticas.'
+        ]
+    },
+    {
+        Elaboración : [
+            'Aplicación de prácticas de protección ambiental, seguridad y salud en el trabajo.',
+            'Conformar metales según procedimientos técnicos y normativa.',
+            'Desempeño de derechos fundamentales de trabajo.',
+            'Enrique Low Murtra - ética y cultura de paz.',
+            'Ensamblar joyas según procedimientos técnicos y normativa.',
+            'Cultura emprendedora y empresarial.',
+            'Actividad física y hábitos de vida saludable.',
+            'Resultado de aprendizaje de la inducción.',
+            'Resultados de aprendizaje etapa práctica.'
+        ]
+    },
+    {
+        Bisutería : [
+            'Aplicación de prácticas de protección ambiental, seguridad y salud en el trabajo.',
+            'Configurar pieza artesanal según técnica de ensartado.',
+            'Desarrollo de procesos de comunicación eficaces y efectivos.',
+            'Desempeño de derechos fundamentales de trabajo.',
+            'Enrique Low Murtra - ética y cultura de paz.',
+            'Actividad física y hábitos de vida saludable.',
+            'Cultura emprendedora y empresarial.',
+            'Razonar cuantitativamente frente a situaciones susceptibles de ser abordadas de manera matemática en contextos laborales, sociales y personales.',
+            'Resultado de aprendizaje de la inducción.',
+            'Resultados de aprendizaje etapa práctica.',
+            'Utilización de herramientas informáticas.'
+        ]
+    },
+    {
+        Laminación : [
+            'Aplicar recubrimientos poliméricos con equipos de aspersión según especificaciones del cliente y fichas técnicas.',
+            'Fabricación de piezas de laminación manual.',
+            'Promover la interacción idónea consigo mismo, con los demás y con la naturaleza en los contextos laboral y social.',
+            'Resultados de aprendizaje etapa práctica.'
+        ]
+    },
+    {
+        RecuperaciónR : [
+            'Aplicación de prácticas de protección ambiental, seguridad y salud en el trabajo.',
+            'Desarrollo de procesos de comunicación eficaces y efectivos.',
+            'Desempeño de derechos fundamentales de trabajo.',
+            'Enrique Low Murtra - ética y cultura de paz.',
+            'Actividad física y hábitos de vida saludable.',
+            'Cultura emprendedora y empresarial.',
+            'Razonar cuantitativamente frente a situaciones susceptibles de ser abordadas de manera matemática en contextos laborales, sociales y personales.',
+            'Recolectar residuos sólidos de acuerdo con procedimientos técnicos.',
+            'Resultado de aprendizaje de la inducción.',
+            'Resultados de aprendizaje etapa práctica.',
+            'Utilización de herramientas informáticas.'
+        ]
+    },
+    {
+        SoldaduraT : [
+            'Aplicar soldadura a tuberías de acero al carbono con el proceso GTAW y SMAW, según código ASME.'
+        ]
+    },
+    {
+        RecuperaciónP : [
+            'Aplicación de conocimientos de las ciencias naturales de acuerdo con situaciones del contexto productivo y social.',
+            'Aplicación de prácticas de protección ambiental, seguridad y salud en el trabajo.',
+            'Desarrollo de procesos de comunicación eficaces y efectivos.',
+            'Desempeño de derechos fundamentales de trabajo.',
+            'Enrique Low Murtra - ética y cultura de paz.',
+            'Cultura emprendedora y empresarial.',
+            'Actividad física y hábitos de vida saludable.',
+            'Interacción de lengua inglesa de forma oral y escrita.',
+            'Preparar materiales poliméricos de acuerdo con procedimientos técnicos.',
+            'Razonar cuantitativamente frente a situaciones susceptibles de ser abordadas de manera matemática en contextos laborales, sociales y personales.',
+            'Recolectar residuos sólidos según procedimiento de aprovechamiento y normativa ambiental.',
+            'Resultado de aprendizaje de la inducción.',
+            'Resultados de aprendizaje etapa práctica.'
+        ]
+    },
+    {
+        Sistemas : [
+            'Aplicación de conocimientos de las ciencias naturales de acuerdo situaciones del contexto productivo y social.',
+            'Aplicación de prácticas de protección ambiental, seguridad y salud en el trabajo.',
+            'Atender requerimientos de los clientes de acuerdo con procedimiento técnico y normativa de procesos de negocios.',
+            'Desarrollo de procesos de comunicación eficaces y efectivos.',
+            'Desempeño de derechos fundamentales de trabajo.',
+            'Enrique Low Murtra - ética y cultura de paz.',
+            'Actividad física y hábitos de vida saludable.',
+            'Cultura emprendedora y empresarial.',
+            'Implementar la red física de datos según diseño y estándares.',
+            'Interacción de lengua inglesa de forma oral y escrita.',
+            'Mantener equipos de cómputo según procedimiento técnico.',
+            'Razonar cuantitativamente frente a situaciones susceptibles de ser abordadas de manera matemática en contextos laborales, sociales y personales.',
+            'Resultado de aprendizaje de la inducción.',
+            'Resultados de aprendizaje etapa práctica.',
+            'Utilización de herramientas informáticas.'
+        ]
+    },
+    {
+        SoldaduraM : [
+            'Aplicación de conocimientos de las ciencias naturales de acuerdo con situaciones del contexto productivo y social.',
+            'Aplicación de prácticas de protección ambiental, seguridad y salud en el trabajo.',
+            'Desarrollo de procesos de comunicación eficaces y efectivos.',
+            'Desempeño de derechos fundamentales de trabajo.',
+            'Enrique Low Murtra - ética y cultura de paz.',
+            'Actividad física y hábitos de vida saludable.',
+            'Cultura emprendedora y empresarial.',
+            'Interacción de lengua inglesa de forma oral y escrita.',
+            'Soldadura en platina de acero al carbono con proceso GTAW.',
+            'Razonar cuantitativamente frente a situaciones susceptibles de ser abordadas de manera matemática en contextos laborales, sociales y personales.',
+            'Resultado de aprendizaje de la inducción.',
+            'Resultados de aprendizaje etapa práctica.',
+            'Soldadura en platina de acero al carbono con proceso GMAW y FCAW.',
+            'Soldadura en platina de acero al carbono con proceso SMAW.',
+            'Utilización de herramientas informáticas.',
+            'Construir el modelo de integración de la cadena logística según los…'
+        ]
+    },
+    {
+        SupervisiónM : [
+            'Aplicación de conocimientos de las ciencias naturales de acuerdo con situaciones del contexto productivo y social.',
+            'Aplicación de prácticas de protección ambiental, seguridad y salud en el trabajo.',
+            'Controlar la calidad de los procesos de acuerdo con requerimientos técnicos y normativa.',
+            'Desarrollo de procesos de comunicación eficaces y efectivos.',
+            'Desempeño de derechos fundamentales de trabajo.',
+            'Enrique Low Murtra - ética y cultura de paz.',
+            'Actividad física y hábitos de vida saludable.',
+            'Cultura emprendedora y empresarial.',
+            'Inspeccionar materiales de acuerdo con método de líquidos penetrantes y normativa.',
+            'Inspeccionar materiales de acuerdo con método visual y normativa.',
+            'Interacción de lengua inglesa de forma oral y escrita.',
+            'Soldadura en platina de acero al carbono con proceso GTAW.',
+            'Orientar investigación formativa según referentes técnicos.',
+            'Programar la producción según métodos y parámetros técnicos.',
+            'Razonar cuantitativamente frente a situaciones susceptibles de ser abordadas de manera matemática en contextos laborales, sociales y personales.',
+            'Resultado de aprendizaje de la inducción.',
+            'Resultados de aprendizaje etapa práctica.',
+            'Soldadura en platina de acero al carbono con proceso GMAW y FCAW.',
+            'Soldadura en platina de acero al carbono con proceso SMAW.',
+            'Supervisar procesos de producción de acuerdo con procedimientos técnicos.',
+            'Utilización de herramientas informáticas.'
+        ]
+    },
+    {
+        Análisis : [
+            ''
+        ]
+    },
+    
+];
