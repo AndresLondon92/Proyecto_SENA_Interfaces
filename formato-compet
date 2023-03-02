@@ -671,8 +671,19 @@ const competencias = [
         ]
     },
     {
-        Xx : [
-            '',
+        Apoyo : [
+            'Admitir personas al servicio según normativa de salud.',
+            'Aplicación de prácticas de protección ambiental, seguridad y salud en el trabajo.',
+            'Afiliación de la población al sistema general de seguridad social en salud.',
+            'Desempeño de derechos fundamentales de trabajo.',
+            'Enrique Low Murtra - ética y cultura de paz.',
+            'Actividad física y hábitos de vida saludable.',
+            'Interacción de lengua inglesa de forma oral y escrita.',
+            'Orientar personas según normativa de salud.',
+            'Razonar cuantitativamente frente a situaciones susceptibles de ser abordadas de manera matemática en contextos laborales, sociales y personales.',
+            'Registrar información de acuerdo con normativa y procedimiento técnico.',
+            'Resultado de aprendizaje de la inducción.',
+            'Resultados de aprendizaje etapa práctica.'
         ]
     },
 ];
